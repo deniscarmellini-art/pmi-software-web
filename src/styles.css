@@ -452,14 +452,53 @@ html { scroll-padding-top: 92px; }
   .hero-lead { font-size: 1rem; }
   .hero-actions { align-items: flex-start; flex-direction: column; gap: 18px; }
   .hero-tags { margin-top: 32px; }
+  .hero-visual,
+  .hero-copy,
+  .section-heading,
+  .sticky-copy,
+  .matcher-heading,
+  .matcher-card,
+  .cta-card,
+  .solution-card,
+  .method-layout,
+  .method-step,
+  .case-card,
+  .before-after,
+  .case-grid {
+    max-width: 100%;
+    width: 100%;
+  }
   .visual-body { padding: 12px; }
   .visual-kpis { grid-template-columns: 1fr; }
   .visual-kpis > div { min-height: 88px; }
+  .method-formula {
+    flex-wrap: wrap;
+    white-space: normal;
+    gap: 8px;
+  }
+  .method-formula i {
+    display: none;
+  }
   .mock-row { grid-template-columns: 1.25fr .8fr .55fr; font-size: .56rem; }
   .flow-step small { font-size: .49rem; }
   .solutions-grid { grid-template-columns: 1fr; }
   .solution-card { min-height: 320px; padding: 23px; }
   .card-link { left: 23px; bottom: 20px; }
+  .matcher-options {
+    gap: 8px;
+  }
+  .matcher-option {
+    padding: 9px 12px;
+    white-space: normal;
+  }
+  .solution-card h3,
+  .solution-card > p,
+  .section-heading > p:last-child,
+  .matcher-result p,
+  .case-lead,
+  .cta-card p {
+    max-width: 100%;
+  }
   .method-step { grid-template-columns: 48px 1fr; gap: 13px; }
   .before-after { grid-template-columns: 1fr; }
   .flow-arrow { transform: rotate(90deg); min-height: 20px; }
