@@ -9,8 +9,8 @@ export function CaseStudy() {
           <p className="eyebrow eyebrow-light">Primo caso studio</p>
           <h2>Dal camion alla giacenza reale.</h2>
           <p className="case-lead">
-            Magazzino Legname digitalizza il ricevimento della materia prima, l'identificazione dei pacchi,
-            la classificazione, gli scarti e la disponibilità reale del materiale.
+            SisStore, applicato al magazzino legname, digitalizza il ricevimento della materia prima,
+            l'identificazione dei pacchi, la classificazione, gli scarti e la disponibilità reale del materiale.
           </p>
 
           <div className="before-after">
@@ -30,7 +30,7 @@ export function CaseStudy() {
 
         <div className="case-card">
           <div className="case-card-head">
-            <span>Magazzino Legname</span>
+            <span>SisStore</span>
             <span className="status-pill">Demo</span>
           </div>
           <div className="case-metric">
