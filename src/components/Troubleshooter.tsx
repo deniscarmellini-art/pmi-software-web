@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const areaOptions = ['Magazzino', 'Logistica', 'Manutenzione', 'Produzione', 'Qualità', 'Pianificazione', 'Altro']
 const methodOptions = ['Excel', 'Carta', 'Gestionale standard', 'Più strumenti insieme', 'Nessun sistema preciso']
@@ -7,7 +8,7 @@ const problemOptions = ['Troppi inserimenti', 'Errori', 'Dati non aggiornati', '
 const caseOptions = {
   warehouse: {
     label: 'SisStore',
-    href: '#caso-magazzino',
+    href: '/sisstore',
     title: 'Controllo giacenza reale',
     description: 'Il punto di partenza è rendere immediata la visibilità del materiale e ridurre i passaggi manuali che fanno perdere tempo e precisione.',
   },
@@ -166,7 +167,7 @@ export function Troubleshooter() {
               <div className="matcher-actions">
                 <button type="button" className="matcher-secondary" onClick={() => goBack(2)}>← Modifica risposte</button>
                 <button type="button" className="matcher-secondary" onClick={restart}>Ricomincia</button>
-                <a className="button" href={recommendation.href}>Guarda il caso più simile</a>
+                <Link className="button" to={recommendation.href}>Guarda il caso più simile</Link>
                 <a className="button button-light" href="#contatti" onClick={prepareContact}>Parliamo del tuo processo</a>
               </div>
             </div>

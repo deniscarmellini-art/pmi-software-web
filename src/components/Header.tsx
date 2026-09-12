@@ -3,7 +3,6 @@ import { useState } from 'react'
 const navItems = [
   { label: 'Soluzioni', href: '#soluzioni' },
   { label: 'Come lavoriamo', href: '#metodo' },
-  { label: 'Caso studio', href: '#caso-magazzino' },
   { label: 'Trova la tua soluzione', href: '#trova-soluzione' },
   { label: 'Contatti', href: '#contatti' },
 ]

@@ -15,7 +15,7 @@ export const solutions: Solution[] = [
     description: 'Gestione e tracciabilità dei materiali dalla ricezione alla disponibilità reale.',
     features: ['Ricevimento', 'QR e barcode', 'Giacenze', 'Scarti', 'Pianificazione'],
     linkLabel: 'SisStore',
-    href: '#caso-magazzino',
+    href: '/sisstore',
     tone: 'warehouse',
   },
   {

@@ -57,7 +57,7 @@ export function ContactCta() {
       .map(([, label]) => label)
 
     if (missing.length > 0 || !/^\S+@\S+\.\S+$/.test(form.email.trim())) {
-      const validationErrors = missing.length > 0 ? missing : []
+      const validationErrors: string[] = [...missing]
       if (form.email.trim() && !/^\S+@\S+\.\S+$/.test(form.email.trim())) {
         validationErrors.push('un indirizzo email valido')
       }

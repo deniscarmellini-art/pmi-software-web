@@ -1,4 +1,5 @@
 import { solutions } from '../data/solutions'
+import { Link } from 'react-router-dom'
 
 export function Solutions() {
   return (
@@ -25,7 +26,7 @@ export function Solutions() {
               <ul>
                 {solution.features.map((feature) => <li key={feature}>{feature}</li>)}
               </ul>
-              <a className="card-link" href={solution.href}>{solution.linkLabel} <span>→</span></a>
+              <Link className="card-link" to={solution.href}>{solution.linkLabel} <span>→</span></Link>
             </article>
           ))}
         </div>
