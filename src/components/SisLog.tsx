@@ -20,14 +20,14 @@ const sisLogFeatures = [
   'Giacenze magazzino',
   'Liste di carico',
   'Carico camion',
-  'Operatori',
+  'Operatori e multiutenza',
   'Gestione bilici',
   'Pianificazione spedizioni',
   'Trasportatori',
   'Peso e volume',
   'KPI e stati',
   'Storico spedizioni',
-  'Accesso multiutente',
+  'Smartphone e tablet',
 ]
 
 export function SisLog() {
@@ -45,6 +45,7 @@ export function SisLog() {
               SisLog collega preparazione, disponibilità del materiale, carico e spedizione in un unico flusso,
               rendendo immediatamente visibile lo stato reale di ogni commessa e di ogni camion.
             </p>
+            <small className="sislog-mobile-note">Utilizzabile da PC, tablet e smartphone.</small>
           </div>
           <div className="sisstore-screen sisstore-screen-hero" aria-label="Placeholder schermata SisLog">
             <span className="sisstore-screen-bar"><i /><i /><i /></span>

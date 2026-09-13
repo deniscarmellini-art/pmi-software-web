@@ -5,10 +5,10 @@ const sisMaintFlow = [
   ['Valutazione', 'Definizione della gestione interna o esterna e delle attività da eseguire.'],
   ['Pianificazione', 'Interventi da fare e manutenzioni preventive vengono organizzati per priorità e scadenza.'],
   ['Intervento', 'Il tecnico apre la scheda completa e registra ciò che viene eseguito.'],
-  ['Ricambi', "Ricambi utilizzati, quantità e relativi costi vengono collegati all'intervento."],
+  ['Ricambi e magazzino', 'Carichi, scarichi e ricambi utilizzati aggiornano la giacenza e segnalano gli articoli sotto scorta.'],
   ['Manodopera e costi', "Ore, tariffa del tecnico e costi esterni concorrono al totale dell'intervento."],
   ['Chiusura', 'L’intervento viene completato con stato finale, rapportini e allegati.'],
-  ['Storico e preventiva', 'La macchina conserva lo storico completo e la successiva manutenzione preventiva viene ricalcolata dalla chiusura effettiva.'],
+  ['Storico e preventiva', 'Lo storico macchina si aggiorna e la prossima manutenzione preventiva viene ricalcolata dalla chiusura effettiva.'],
 ] as const
 
 const sisMaintFeatures = [
@@ -18,13 +18,13 @@ const sisMaintFeatures = [
   'Pianificazione',
   'Interventi',
   'Tecnici interni',
-  'Assistenze esterne',
-  'Ricambi',
+  'Tecnici e assistenze esterne',
+  'Magazzino ricambi',
   'Scorte minime',
   'Costi e manodopera',
   'Macchine e impianti',
   'Documenti e allegati',
-  'Fornitori e referenti',
+  'Fornitori e aziende di assistenza',
   'KPI e dashboard',
   'Storico macchina',
   'Accesso multiutente',
@@ -42,7 +42,7 @@ export function SisMaint() {
               Gestione della manutenzione, dagli interventi allo storico completo degli impianti.
             </p>
             <p className="sisstore-lead">
-              SisMaint riunisce richieste, manutenzione preventiva, ricambi, tecnici, documenti e costi in un unico flusso condiviso,
+              SisMaint riunisce richieste, manutenzione preventiva, ricambi, tecnici, fornitori, aziende di assistenza, documenti e costi in un unico flusso condiviso,
               mantenendo sempre visibile ciò che deve essere fatto e ciò che è già stato eseguito.
             </p>
           </div>
@@ -72,12 +72,12 @@ export function SisMaint() {
               <small>Interventi, guasti, ricambi, documenti e costi non sono consultabili rapidamente in un unico punto.</small>
             </span>
             <span className="sisstore-card sisstore-problem-card">
-              <strong>Ricambi e disponibilità da verificare</strong>
-              <small>Non è immediato sapere cosa è disponibile, cosa è sotto scorta e quanto è stato utilizzato negli interventi.</small>
+              <strong>Ricambi e scorte da controllare</strong>
+              <small>Carichi, scarichi e disponibilità dei ricambi devono essere verificati manualmente, rendendo difficile individuare subito gli articoli sotto scorta.</small>
             </span>
             <span className="sisstore-card sisstore-problem-card">
               <strong>Tecnici, fornitori e documenti separati</strong>
-              <small>Referenti, assistenze esterne, manuali, schemi e rapportini vengono cercati in archivi diversi.</small>
+              <small>Fornitori, aziende di assistenza, referenti, tecnici e documentazione vengono spesso gestiti in archivi separati.</small>
             </span>
             <span className="sisstore-card sisstore-problem-card">
               <strong>Costi non immediatamente visibili</strong>
@@ -127,15 +127,17 @@ export function SisMaint() {
                 <small>PRIMA</small>
                 <span>Richieste distribuite</span>
                 <span>Preventive da ricordare</span>
-                <span>Ricambi da verificare</span>
+                <span>Ricambi e scorte da verificare</span>
+                <span>Fornitori e assistenze separati</span>
                 <span>Costi da ricostruire</span>
-                <span>Documentazione dispersa</span>
+                <span>Documentazione e storico dispersi</span>
               </div>
               <div>
                 <small>CON SISMAINT</small>
                 <span>Richieste e priorità visibili</span>
                 <span>Preventiva programmata</span>
-                <span>Ricambi collegati all'intervento</span>
+                <span>Magazzino ricambi aggiornato e scorte evidenziate</span>
+                <span>Fornitori e assistenze in un’unica anagrafica</span>
                 <span>Manodopera e costi calcolati</span>
                 <span>Storico e documenti per macchina</span>
               </div>
@@ -167,7 +169,7 @@ export function SisMaint() {
         <div className="sisstore-fit">
           <p className="eyebrow eyebrow-light">Per chi è adatto</p>
           <div>
-            <p>SisMaint è pensato per aziende produttive che devono coordinare interventi, manutenzione preventiva, tecnici, ricambi e documentazione su più macchine o impianti.</p>
+            <p>SisMaint è pensato per aziende produttive che devono coordinare interventi, manutenzione preventiva, tecnici, ricambi, fornitori, assistenze e documentazione su più macchine o impianti.</p>
             <ul className="sisstore-fit-points">
               <li>Più macchine e interventi da coordinare</li>
               <li>Manutenzione preventiva da tenere sotto controllo</li>
@@ -180,7 +182,7 @@ export function SisMaint() {
           <div>
             <p className="eyebrow eyebrow-light">Un processo. Una direzione</p>
             <h3>Vuoi capire se SisMaint può semplificare la gestione della manutenzione?</h3>
-            <p>Partiamo da come gestite oggi richieste, interventi, preventiva e ricambi e valutiamo insieme cosa avrebbe senso digitalizzare.</p>
+            <p>Partiamo da come gestite oggi richieste, interventi, preventiva, ricambi e assistenze e valutiamo insieme cosa avrebbe senso digitalizzare.</p>
           </div>
           <div className="sisstore-cta-actions">
             <Link className="button" to="/#trova-soluzione">Trova la tua soluzione</Link>

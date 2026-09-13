@@ -17,10 +17,6 @@ export function Solutions() {
         <div className="solutions-grid">
           {solutions.map((solution) => (
             <article className={`solution-card tone-${solution.tone}`} key={solution.title}>
-              <div className="solution-topline">
-                <span>{solution.eyebrow}</span>
-                <span className="card-line" />
-              </div>
               <h3>{solution.title}</h3>
               <p>{solution.description}</p>
               <ul>
