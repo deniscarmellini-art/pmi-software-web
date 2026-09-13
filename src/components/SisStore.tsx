@@ -21,6 +21,7 @@ const sisStoreFeatures = [
   'Pianificazione',
   'KPI',
   'Anagrafiche e parametri',
+  'Accesso multiutente',
 ]
 
 export function SisStore() {
@@ -52,13 +53,29 @@ export function SisStore() {
             <h3>Quando la disponibilità va ricostruita.</h3>
           </div>
           <div className="sisstore-problem-list">
-            <span className="sisstore-card sisstore-problem-card"><strong>Gestione tramite Excel e carta</strong></span>
-            <span className="sisstore-card sisstore-problem-card"><strong>Registrazioni manuali</strong></span>
-            <span className="sisstore-card sisstore-problem-card"><strong>Scarti da verificare</strong></span>
-            <span className="sisstore-card sisstore-problem-card"><strong>Giacenze non aggiornate</strong></span>
+            <span className="sisstore-card sisstore-problem-card">
+              <strong>Gestione tramite Excel e carta</strong>
+              <small>Dati distribuiti tra file, fogli e documenti difficili da mantenere allineati.</small>
+            </span>
+            <span className="sisstore-card sisstore-problem-card">
+              <strong>Registrazioni manuali</strong>
+              <small>Le stesse informazioni vengono inserite o controllate più volte.</small>
+            </span>
+            <span className="sisstore-card sisstore-problem-card">
+              <strong>Scarti da verificare</strong>
+              <small>Il dato teorico deve essere corretto dopo la lavorazione o la classificazione.</small>
+            </span>
+            <span className="sisstore-card sisstore-problem-card">
+              <strong>Giacenze non aggiornate</strong>
+              <small>La disponibilità reale non è sempre immediatamente visibile.</small>
+            </span>
+            <span className="sisstore-card sisstore-problem-card">
+              <strong>Accessi concorrenti e file condivisi</strong>
+              <small>Più persone devono lavorare sugli stessi dati senza copie, blocchi o versioni diverse.</small>
+            </span>
             <span className="sisstore-card sisstore-problem-card">
               <strong>Nessuna visione immediata dei dati</strong>
-              <small>Le informazioni esistono, ma non sono disponibili subito sotto forma di KPI, totali e indicatori.</small>
+              <small>KPI, totali e indicatori richiedono elaborazioni o controlli separati.</small>
             </span>
           </div>
         </div>
@@ -88,7 +105,7 @@ export function SisStore() {
             <h3>Gli strumenti che tengono insieme il processo.</h3>
           </div>
           <ul className="sisstore-features">
-            {sisStoreFeatures.map((feature) => <li key={feature}>{feature}</li>)}
+            {sisStoreFeatures.map((feature) => <li key={feature}><strong>{feature}</strong></li>)}
           </ul>
         </div>
 

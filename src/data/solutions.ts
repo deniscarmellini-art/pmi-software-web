@@ -12,8 +12,8 @@ export const solutions: Solution[] = [
   {
     eyebrow: '01',
     title: 'Materiali e Magazzino',
-    description: 'Gestione e tracciabilità dei materiali dalla ricezione alla disponibilità reale.',
-    features: ['Ricevimento', 'QR e barcode', 'Giacenze', 'Scarti', 'Pianificazione'],
+    description: 'Gestione e tracciabilità dei materiali dalla ricezione alla disponibilità reale, con dati condivisi tra più operatori.',
+    features: ['Ricevimento', 'QR', 'Giacenze', 'Scarti', 'Multiutente', 'KPI', 'Pianificazione'],
     linkLabel: 'SisStore',
     href: '/sisstore',
     tone: 'warehouse',
@@ -21,10 +21,10 @@ export const solutions: Solution[] = [
   {
     eyebrow: '02',
     title: 'Logistica e Spedizioni',
-    description: 'Dalla commessa al carico: preparazione, controllo e stato della spedizione sempre visibili.',
-    features: ['Commesse', 'Preparazione', 'Carichi', 'Spedizioni', 'Storico'],
+    description: 'Gestione del flusso logistico dalla commessa alla partenza, con giacenze, carichi, mezzi e spedizioni sempre sotto controllo.',
+    features: ['Commesse', 'Giacenze', 'QR', 'Carichi', 'Pianificazione', 'Gestione bilici', 'KPI'],
     linkLabel: 'SisLog',
-    href: '#soluzioni',
+    href: '/sislog',
     tone: 'logistics',
   },
   {
@@ -33,7 +33,7 @@ export const solutions: Solution[] = [
     description: 'Richieste, interventi, preventiva, ricambi e costi collegati allo storico delle macchine.',
     features: ['Richieste', 'Preventiva', 'Interventi', 'Ricambi', 'Costi'],
     linkLabel: 'SisMaint',
-    href: '#soluzioni',
+    href: '/sismaint',
     tone: 'maintenance',
   },
   {

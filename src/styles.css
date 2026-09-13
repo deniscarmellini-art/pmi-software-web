@@ -193,6 +193,8 @@ html { scroll-padding-top: 92px; }
 .case-note { margin-top: 31px; padding-top: 15px; border-top: 1px solid #e1e6e3; color: #7d8783; font-size: .68rem; }
 
 .sisstore-section { background: var(--ink); color: white; }
+.sislog-section .sisstore-hero { padding-top: 14px; }
+.sislog-section .sisstore-lead { max-width: 580px; }
 .sisstore-shell { display: flex; flex-direction: column; gap: 92px; }
 .sisstore-hero { display: grid; grid-template-columns: 1fr .9fr; gap: 90px; align-items: center; }
 .sisstore-hero-copy > .eyebrow { transform: translateY(14px); }
@@ -214,8 +216,7 @@ html { scroll-padding-top: 92px; }
 .sisstore-card small { color: #9eb3a7; font-size: .68rem; font-weight: 400; line-height: 1.4; }
 .sisstore-problem-card strong { font-size: .9rem; }
 .sisstore-problem-card small { font-size: .72rem; line-height: 1.5; }
-.sisstore-problem-list span { display: flex; flex-direction: column; justify-content: center; min-height: 92px; padding: 16px; line-height: 1.4; }
-.sisstore-problem-list span:nth-child(5) { grid-column: 1 / -1; min-height: 126px; }
+.sisstore-problem-list span { display: flex; flex-direction: column; justify-content: center; height: 132px; padding: 16px; line-height: 1.4; }
 .sisstore-problem-list small { display: block; margin-top: 7px; }
 .sisstore-flow { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 10px; }
 .sisstore-flow-step { grid-column: span 3; display: flex; align-items: center; gap: 10px; min-height: 118px; padding: 10px 13px; }
@@ -227,9 +228,23 @@ html { scroll-padding-top: 92px; }
 .sisstore-flow-step small { display: block; max-width: 190px; margin-top: 4px; }
 .sisstore-flow-step small { font-size: .74rem; line-height: 1.5; }
 .sisstore-flow-step i { margin-left: 3px; color: #88b69e; font-family: inherit; font-style: normal; }
+.sislog-flow { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+.sislog-flow .sisstore-flow-step { grid-column: span 3; }
+.sismaint-flow { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+.sismaint-flow .sisstore-flow-step { grid-column: span 3; }
 .sisstore-features-grid { padding-top: 48px; }
-.sisstore-features { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; margin: 0; padding: 0; list-style: none; }
-.sisstore-features li { display: flex; align-items: center; height: 64px; padding: 12px 14px; border: 1px solid rgba(255,255,255,.12); border-radius: 10px; background: #26372f; color: #dbe7e0; font-family: inherit; font-size: .86rem; font-weight: 700; line-height: 1.35; }
+.sisstore-features { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 10px; margin: 0; padding: 0; list-style: none; }
+.sisstore-features li { grid-column: span 3; display: flex; align-items: center; justify-content: center; height: 82px; padding: 12px 14px; border: 1px solid rgba(255,255,255,.12); border-radius: 10px; background: #26372f; color: #dbe7e0; font-family: inherit; line-height: 1.35; text-align: center; }
+.sisstore-features li:nth-child(9) { grid-column: 2 / span 3; }
+.sisstore-features li:nth-child(10) { grid-column: 5 / span 3; }
+.sisstore-features li:nth-child(11) { grid-column: 8 / span 3; }
+.sisstore-features strong { font-size: .86rem; font-weight: 700; }
+.sislog-features { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.sisstore-features.sislog-features li:nth-child(n) { grid-column: auto; }
+.sismaint-features { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.sisstore-features.sismaint-features li:nth-child(n) { grid-column: auto; }
+.sislog-section .sisstore-case { padding-bottom: 36px; }
+.sislog-section .sisstore-before-after > div { min-height: 200px; }
 .sisstore-case { display: grid; grid-template-columns: 1fr .9fr; gap: 64px; align-items: center; padding: 52px 0; border-top: 1px solid rgba(255,255,255,.12); }
 .sisstore-case-copy > p:not(.eyebrow) { max-width: 620px; margin: 24px 0 0; color: #aebdb5; line-height: 1.72; }
 .sisstore-screen-case { min-height: 230px; }
@@ -536,14 +551,34 @@ html { scroll-padding-top: 92px; }
   .sisstore-screen-grid { grid-template-columns: 1fr; }
   .sisstore-screen-small:first-child { grid-column: auto; }
   .sisstore-features { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sisstore-features li,
+  .sisstore-features li:nth-child(9),
+  .sisstore-features li:nth-child(10),
+  .sisstore-features li:nth-child(11) { grid-column: auto; }
   .sisstore-problem-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .sisstore-problem-list span { min-height: 92px; }
-  .sisstore-problem-list span:nth-child(5) { grid-column: 1 / -1; min-height: 126px; }
+  .sisstore-problem-list span { height: 132px; }
   .sisstore-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .sisstore-flow-step,
   .sisstore-flow-step:nth-child(5),
   .sisstore-flow-step:nth-child(6),
   .sisstore-flow-step:nth-child(7) { grid-column: auto; min-height: 106px; }
+  .sislog-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sislog-flow .sisstore-flow-step,
+  .sislog-flow .sisstore-flow-step:nth-child(5),
+  .sislog-flow .sisstore-flow-step:nth-child(6),
+  .sismaint-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sismaint-flow .sisstore-flow-step { grid-column: auto; }
+  .sismaint-features { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sisstore-features.sismaint-features li:nth-child(n) { grid-column: auto; }
+  .sislog-flow .sisstore-flow-step:nth-child(7) { grid-column: auto; }
+  .sislog-features li,
+  .sislog-features li:nth-child(9),
+  .sislog-features li:nth-child(10),
+  .sislog-features li:nth-child(11),
+  .sislog-features li:nth-child(13),
+  .sislog-features li:nth-child(14),
+  .sislog-features li:nth-child(15),
+  .sislog-features li:nth-child(16) { grid-column: auto; }
 }
 
 @media (max-width: 680px) {
@@ -618,10 +653,15 @@ html { scroll-padding-top: 92px; }
   .sisstore-hero { gap: 34px; }
   .sisstore-grid { padding-top: 52px; }
   .sisstore-features { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sisstore-features li,
+  .sisstore-features li:nth-child(9),
+  .sisstore-features li:nth-child(10),
+  .sisstore-features li:nth-child(11) { grid-column: auto; }
+  .sismaint-features { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sisstore-features.sismaint-features li:nth-child(n) { grid-column: auto; }
   .sisstore-fit-points { grid-template-columns: 1fr; }
   .sisstore-problem-list { grid-template-columns: 1fr; }
-  .sisstore-problem-list span { min-height: 92px; }
-  .sisstore-problem-list span:nth-child(5) { grid-column: auto; min-height: 126px; }
+  .sisstore-problem-list span { height: 132px; }
   .sisstore-flow { grid-template-columns: 1fr; }
   .sisstore-flow-step { flex: 1 1 100%; }
   .sisstore-flow-step i { display: none; }
